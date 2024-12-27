@@ -1,4 +1,4 @@
-package com.example.web_class_assignment_1
+package com.example.android_class_assignment_1
 
 import Board
 import android.os.Bundle

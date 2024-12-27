@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Web_Class_Assignment_1"
+rootProject.name = "Android_Class_Assignment_1"
 include(":app")
  
