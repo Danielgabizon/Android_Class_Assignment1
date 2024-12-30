@@ -75,22 +75,24 @@ class MainActivity : AppCompatActivity() {
             imageViews[index].isEnabled = false // disable the cell
             val player = board.getCurrentPlayer()
             imageViews[index].setImageResource(if (player == "X") R.drawable.x else R.drawable.o)
-            if (board.checkWin()) {
+            if (board.checkWin()) { // check if the current player wins
                 feedback.text = "$player wins!"
                 endGame()
-            } else if (board.isFullBoard()) {
+            } else if (board.isFullBoard()) { // check if the board is full
                 feedback.text = "It's a draw!"
                 endGame()
-            } else {
+            } else { // switch to the next player
                 board.switchPlayer()
                 feedback.text = "${board.getCurrentPlayer()}'s turn"
             }
         }
     }
     private fun endGame() {
+        // disable all cells
         imageViews.forEach {
             it.isEnabled = false
         }
+        // show the play button
         play.text = "Play Again" // prepare for next game
         play.visibility = View.VISIBLE
     }
