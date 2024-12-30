@@ -40,6 +40,10 @@ class MainActivity : AppCompatActivity() {
             findViewById(R.id.imageView8),
             findViewById(R.id.imageView9)
         )
+        // disable all cells at the beginning
+        imageViews.forEach {
+            it.isEnabled = false
+        }
         feedback = findViewById(R.id.feedback)
         play = findViewById(R.id.play_button)
         board = Board() // create a new instance of the Board class
@@ -87,7 +91,7 @@ class MainActivity : AppCompatActivity() {
         imageViews.forEach {
             it.isEnabled = false
         }
-        play.visibility = View.VISIBLE
         play.text = "Play Again" // prepare for next game
+        play.visibility = View.VISIBLE
     }
 }
